@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  diceroll:
+    image: ghcr.io/m0rthe/DiceRoll
+    volumes: 
+      - $HOME/diceroll/data
+    restart: always
+    command: node app.js
