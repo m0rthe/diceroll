@@ -10,7 +10,7 @@ If you don't know discord.js and node.js - take a look at the [guide](https://di
 
 ### 1. Download the files ###
 
-`git clone https://github.com/m0rthe/DiceRoll.git`
+`git clone git@github.com:m0rthe/diceroll.git`
 
 ### 2. Install node.js ###
 
