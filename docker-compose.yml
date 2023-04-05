@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  #  diceroll:
+    image: #insert link ghr.io, still have to publish package and create image with github actions
+    volumes: 
+      - $HOME/diceroll/data
+    restart: always
+    command: node app.js
