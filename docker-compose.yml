@@ -2,7 +2,7 @@ version: '3'
 
 services:
   diceroll:
-    image: ghcr.io/m0rthe/DiceRoll
+    image: ghcr.io/m0rthe/diceroll
     volumes: 
       - $HOME/diceroll/data
     restart: always
