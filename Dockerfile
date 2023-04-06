@@ -1,17 +1,13 @@
-FROM node:latest
+FROM node:18-alpine
 
-# Create the bot's directory
+#RUN mkdir -p /home/diceroll
 
-RUN mkdir -p /usr/src/bot
+WORKDIR /home/diceroll
 
-WORKDIR /usr/src/bot
+COPY package*.json ./
 
-COPY package.json /usr/src/bot
+RUN npm install -g npm
 
-RUN npm install
-
-COPY . /usr/src/bot
-
-# Start the bot
+COPY . .
 
 CMD ["node", "app.js"]
