@@ -4,7 +4,7 @@
   "description": "A Discord.js bot",
   "main": "app.js",
   "scripts": {
-    "start": "node ./diceroll/app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
