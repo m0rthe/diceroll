@@ -30,7 +30,7 @@ After you're done, create a config.json file and copy your `token` , `bot Id` an
 <img src="/images/config_file.png" width="303" height="133" />
 
 # **Start the bot using docker**
-`docker-compose up`
+`docker-compose up -d`
 
 # DiceRoll commands:
 You can choose to roll a 
