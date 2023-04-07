@@ -3,7 +3,7 @@ name: Login and Build
 on:
   push:
     branches:
-      - server
+      - main
 
 jobs:
   dockerloginbuildpush:
