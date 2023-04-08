@@ -52,7 +52,15 @@ jobs:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
+      
+      # Login to Docker Hub
+      - name: Login to Docker Hub
+        uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+          #password: ${{ secrets.DOCKER_PASSWORD }}
+      
       # Extract metadata (tags, labels) for Docker
       # https://github.com/docker/metadata-action
       - name: Extract Docker metadata
@@ -72,8 +80,17 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: | 
             ghcr.io/m0rthe/diceroll:latest
+            m0rthe/diceroll:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          
+      - name: Publish to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: m0rthe/diceroll
+          tags: latest
 
       # Sign the resulting Docker image digest except on PRs.
       # This will only write to the public Rekor transparency log when the Docker
