@@ -60,7 +60,7 @@ module.exports = {
         }
         switch (command) {
             case 'd6':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 4)}`);
+            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 6)}`);
         }
         switch (command) {
             case 'd8':
