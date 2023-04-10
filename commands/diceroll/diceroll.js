@@ -36,51 +36,30 @@ module.exports = {
 				.setDescription('Rolls a d100')),
 	async execute (interaction) {
         const command = interaction.options.getSubcommand();
- 		// if (command === "d4") {
- 		// 	await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 4)}`);
- 		// } else if (command === "d6") {
-        //     await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 6)}`);
- 		// } else if (command === "d8") {
- 		// 	await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 8)}`);
- 		// } else if (command === "d10") {
- 		// 	await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 10)}`);
- 		// } else if (command === "d12") {
- 		// 	await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 12)}`);
- 		// } else if (command === "d20") {
- 		// 	await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 20)}`);
- 		// } else if (command ===  "d100") {
- 		// 	await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 100)}`);
- 		// } else {
-        //      await interaction.reply("Command not working properly");
-        //  }
-
         switch (command) {
             case 'd4':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 4)}`);
-        }
-        switch (command) {
-            case 'd6':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 6)}`);
-        }
-        switch (command) {
-            case 'd8':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 8)}`);
-        }
-        switch (command) {
-            case 'd10':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 10)}`);
-        }
-        switch (command) {
-            case 'd12':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 12)}`);
-        }
-        switch (command) {
-            case 'd20':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 20)}`);
-        }
-        switch (command) {
-            case 'd100':
-            await interaction.reply(`Rolling your dice ... ${Math.floor(1 + Math.random() * 100)}`);
+            	await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 4) +1)}`);
+				break;
+			case 'd6':
+				await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 6) +1)}`);
+				break;
+			case 'd8':
+				await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 8) +1)}`);
+				break;
+			case 'd10':
+				await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 10) +1)}`);
+				break;
+			case 'd12':
+				await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 12) +1)}`);
+				break;
+			case 'd20':
+				await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 20) +1)}`);
+				break;
+			case 'd100':
+				await interaction.reply(`Rolling your dice ... ${(Math.floor(Math.random() * 100) +1)}`);
+				break;
+			default:
+				await interaction.reply("Command not found");
         }
  	},
 };
