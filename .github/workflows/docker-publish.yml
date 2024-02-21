@@ -78,7 +78,6 @@ jobs:
         uses: docker/build-push-action@v4.0.0
         with:
           context: .
-          file: ({context}/Dockerfile)
           push: ${{ github.event_name != 'pull_request' }}
           tags: | 
             ghcr.io/m0rthe/diceroll:latest
