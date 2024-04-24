@@ -1,6 +1,6 @@
 {
   "name": "diceroll",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "A Discord.js bot",
   "main": "app.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.9.0",
+    "discord.js": "^14.14.1",
     "node": "^19.8.1"
   }
 }

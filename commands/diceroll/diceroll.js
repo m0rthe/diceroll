@@ -27,9 +27,11 @@ module.exports = {
     .addSubcommand((command) =>
       command.setName("d100").setDescription("Rolls a d100")
     ),
-  async execute(interaction) {
-    const command = interaction.options.getSubcommand();
 
+  async execute(interaction) {
+    //const command = interaction.options.getString();
+    const command = interaction.options.getSubcommand();
+    // const command = interaction.options;
     var message_option = [
       "Critical failure!", // 0
       "Critical success!", // 1
